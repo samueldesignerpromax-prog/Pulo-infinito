@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Infinite Jumper - Suba sem parar!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+        
+        <!-- Interface do jogo -->
+        <div class="game-ui">
+            <div class="score-board">
+                Pontuação: <span id="score">0</span>
+            </div>
+            <div class="high-score-board">
+                Recorde: <span id="highScore">0</span>
+            </div>
+        </div>
+        
+        <!-- Botão de reinício (aparece quando perde) -->
+        <div id="gameOverlay" class="game-overlay hidden">
+            <div class="game-over-content">
+                <h2>Game Over!</h2>
+                <p>Sua pontuação: <span id="finalScore">0</span></p>
+                <button id="restartButton" class="restart-btn">Jogar Novamente</button>
+            </div>
+        </div>
+        
+        <!-- Controles mobile -->
+        <div class="mobile-controls">
+            <button class="control-btn" id="leftBtn">←</button>
+            <button class="control-btn" id="rightBtn">→</button>
+        </div>
+        
+        <div class="instructions">
+            ← → ou A/D | Toque nos botões
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
